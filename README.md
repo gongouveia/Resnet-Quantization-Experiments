@@ -1,5 +1,5 @@
 # Adaround-Tools
-AdaRound tools for per layer quantization
+tools for per layer quantization
 
 
 # Model Management Script

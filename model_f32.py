@@ -11,7 +11,7 @@ from util.hyperparameters import DEVICE
 
 
 
-model_path = 'saved_model.pt'
+model_path = 'models/saved_model.pt'
 
 model = model_util.load_pytorch_script_model(model_path)
 

@@ -11,19 +11,18 @@ import torch.nn.quantized as nnq
 
 from util.hyperparameters import DEVICE
 
-
-
-model_path = 'modesl/saved_model.pt'
-model_path_half = 'modesl/saved_model_half.pt'
-
-model = model_util.load_pytorch_script_model(model_path)
+model_path = 'models/saved_model.pt'
+model_path_half = 'models/saved_model_half.pt'
 
 
 
-if model:
+
+try:
+    model = model_util.load_pytorch_script_model(model_path)
+
     # You can now use the model for inference or further processing
     print("Model is ready for use.")
-else:
+except:
     print("Model could not be loaded.")
 
 

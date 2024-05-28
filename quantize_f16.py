@@ -9,8 +9,8 @@ import torch.nn as nn
 import torch.nn.quantized as nnq
 
 
-# Other
-DEVICE = "cuda"
+from util.hyperparameters import DEVICE
+
 
 
 model_path = 'saved_model.pt'

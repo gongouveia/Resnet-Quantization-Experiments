@@ -7,20 +7,7 @@ import torch.nn.functional as F
 from torch.utils.data import DataLoader
 
 
-
-# Hyperparameters
-RANDOM_SEED = 1
-LEARNING_RATE = 0.001
-BATCH_SIZE = 128
-NUM_EPOCHS = 5
-
-# Architecture
-NUM_FEATURES = 28*28
-NUM_CLASSES = 10
-
-# Other
-DEVICE = "cuda"
-GRAYSCALE = True
+from util.hyperparameters import NUM_CLASSES, GRAYSCALE
 
 
 

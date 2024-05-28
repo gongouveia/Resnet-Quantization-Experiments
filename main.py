@@ -11,7 +11,7 @@ def main():
         '-o', '--option',
         type=str,
         choices=['train_model', 'evaluate_fp32', 'evaluate_fp16'],
-        required=True,
+        default = 'None',
         help='Specify the action to perform: train_model, evaluate_fp32, or evaluate_fp16'
     )
 
@@ -26,7 +26,7 @@ def main():
     elif args.option == 'evaluate_fp32':
         import model_f32
     else:
-        print("Invalid option specified. Use --help for more information.")
+        print("No option specified. Use --help for more information.")
 
 if __name__ == "__main__":
     main()

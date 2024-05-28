@@ -6,9 +6,7 @@ import torch
 import torch.nn as nn
 import torch.nn.quantized as nnq
 
-
-# Other
-DEVICE = "cuda"
+from util.hyperparameters import DEVICE
 
 
 

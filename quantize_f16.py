@@ -13,8 +13,8 @@ from util.hyperparameters import DEVICE
 
 
 
-model_path = 'saved_model.pt'
-model_path_half = 'saved_model_half.pt'
+model_path = 'modesl/saved_model.pt'
+model_path_half = 'modesl/saved_model_half.pt'
 
 model = model_util.load_pytorch_script_model(model_path)
 

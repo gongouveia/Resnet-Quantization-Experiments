@@ -20,6 +20,7 @@ from util.dataset_util import dataset_load
 from util.model_util import compute_accuracy
 
 from model import resnet18 
+from util.hyperparameters import NUM_CLASSES, RANDOM_SEED, DEVICE, LEARNING_RATE, NUM_EPOCHS, NUM_FEATURES, BATCH_SIZE
 
 
 if torch.cuda.is_available():
@@ -27,36 +28,11 @@ if torch.cuda.is_available():
     torch.backends.cudnn.deterministic = True
 
 
-##########################
-### SETTINGS
-##########################
-
-# Hyperparameters
-RANDOM_SEED = 1
-LEARNING_RATE = 0.001
-BATCH_SIZE = 128
-NUM_EPOCHS = 5
-
-# Architecture
-NUM_FEATURES = 28*28
-NUM_CLASSES = 10
-
-# Other
-DEVICE = "cuda"
-GRAYSCALE = True
-
-
-
 train_dataset, test_dataset, train_loader, test_loader = dataset_load()
-
-
 device = torch.device(DEVICE)
-torch.manual_seed(0)
 
 for epoch in range(2):
-
     for batch_idx, (x, y) in enumerate(train_loader):
-        
         print('Epoch:', epoch+1, end='')
         print(' | Batch index:', batch_idx, end='')
         print(' | Batch size:', y.size()[0])

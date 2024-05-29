@@ -33,3 +33,11 @@ python main.py --help
 ## Models information
 
 
+## How to contrinute
+
+Contributions to this project are welcome! If you'd like to contribute to add new quantization methods, please follow the standard GitHub workflow:
+1. Fork the repository.
+2. Create a new branch for your feature (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Create a new Pull Request.

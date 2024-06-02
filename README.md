@@ -22,11 +22,14 @@ The <option_name> should be one of the following:
 
 `train_model` to train a new model.
 
-`evaluate_fp32` to evaluate a model in FP32 precision.
+`evaluate_fp32` to evaluate a model in FP32 precision. Requires to run 
+`train_model` first.
 
-`evaluate_fp16` to evaluate a model in FP16 precision.
+`evaluate_fp16` to evaluate a model in FP16 precision. Requires to run 
+`train_model` first.
 
-`int8_PTQ` to perform Post Training Quantization.
+`int8_PTQ` to perform Post Training Quantization. Requires to run 
+`train_model` first.
 
 `int8_QAT` to perform Quantization Aware Training.
 

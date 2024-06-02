@@ -6,7 +6,7 @@ tools for per layer quantization
 
 ## Overview
 
-This script is designed to handle command-line options for training and evaluating machine learning models. By specifying different options, users can train a new model, evaluate a model in FP32 precision, or evaluate a model in FP16 precision. The script leverages Python's `argparse` library to manage command-line arguments efficiently.
+This script is developed to manage command-line options for training and evaluating machine learning models. By specifying various options, users can train a new model, evaluate a model with FP32 precision, evaluate a model with FP16 precision, perform 8bit Post Training Quantization (PTQ), or conduct Quantization Aware Training (QAT). Python's argparse library is employed to streamline the handling of command-line arguments effectively.
 
 ## Usage
 

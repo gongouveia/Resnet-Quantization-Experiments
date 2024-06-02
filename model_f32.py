@@ -6,12 +6,12 @@ import torch
 import torch.nn as nn
 import torch.nn.quantized as nnq
 
-from util.hyperparameters import DEVICE
+from hyperparameters import DEVICE
 
 
 
 
-model_path = 'models/saved_model.pt'
+model_path = r'models\resnet_model_trained.pt'
 
 model = model_util.load_pytorch_script_model(model_path)
 

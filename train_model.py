@@ -19,8 +19,9 @@ from PIL import Image
 from util.dataset_util import dataset_load
 from util.model_util import compute_accuracy
 
-from model import resnet18 
-from util.hyperparameters import NUM_CLASSES, RANDOM_SEED, DEVICE, LEARNING_RATE, NUM_EPOCHS, NUM_FEATURES, BATCH_SIZE
+from hyperparameters import NUM_CLASSES, RANDOM_SEED, DEVICE, LEARNING_RATE, NUM_EPOCHS, NUM_FEATURES, BATCH_SIZE
+
+from model import resnet18
 
 
 if torch.cuda.is_available():
@@ -43,14 +44,14 @@ for epoch in range(2):
 
 torch.manual_seed(RANDOM_SEED)
 
-model = resnet18(NUM_CLASSES)
+model = resnet18(NUM_CLASSES, True)
 model.to(DEVICE)
 
 optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE) 
 
 
 start_time = time.time()
-for epoch in range(NUM_EPOCHS):
+for epoch in range(1):
     
     model.train()
     for batch_idx, (features, targets) in enumerate(train_loader):
@@ -99,4 +100,4 @@ logits, probas = model(features.to(device)[0, None])
 
 with torch.no_grad():
     scripted_model = torch.jit.script(model)
-    scripted_model.save('models/saved_model.pt')
+    scripted_model.save('models/resnet18_trained_f32.pt')

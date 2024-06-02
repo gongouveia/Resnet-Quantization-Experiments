@@ -5,14 +5,12 @@ import util.dataset_util as dataset_util
 
 
 import torch
-import torch.nn as nn
-import torch.nn.quantized as nnq
 
 
-from util.hyperparameters import DEVICE
+from hyperparameters import DEVICE
 
-model_path = 'models/saved_model.pt'
-model_path_half = 'models/saved_model_half.pt'
+model_path = r'models\resnet_model_trained.pt'
+model_path_half = r'models\resnet_model_trained_fp16.pt'
 
 
 

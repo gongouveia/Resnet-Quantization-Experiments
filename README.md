@@ -1,4 +1,4 @@
-# Adaround-Tools
+# Resnet_quantization-Tools
 tools for per layer quantization
 
 
@@ -25,6 +25,11 @@ The <option_name> should be one of the following:
 `evaluate_fp32` to evaluate a model in FP32 precision.
 
 `evaluate_fp16` to evaluate a model in FP16 precision.
+
+`int8_PTQ` to perform Post Training Quantization.
+
+`int8_QAT` to perform Quantization Aware Training.
+
 
 Use for more information:
 `

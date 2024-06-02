@@ -70,7 +70,7 @@ with torch.no_grad(): # save memory during inference
 
 
 try:
-    model_util.save_model_script(model.half(), r'models\resnet_model__pretrained_8bit.pt')
+    model_util.save_model_script(model.half(), r'models\resnet18_trained_PTQ.pt')
     print('model 8bit saved')
 
 except:

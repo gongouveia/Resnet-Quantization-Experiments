@@ -1,4 +1,4 @@
-# Adaround-Tools
+# Quantization-Tools
 tools for per layer quantization
 
 ## Overview

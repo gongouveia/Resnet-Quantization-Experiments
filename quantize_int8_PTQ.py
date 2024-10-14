@@ -49,17 +49,15 @@ model_fused = torch.quantization.fuse_modules(model,
                                                ['layer4.1.conv1', 'layer4.1.bn1', 'layer4.1.relu'],
                                                ['layer4.1.conv2', 'layer4.1.bn2']])
 
-# Quantize the model
-model_prepared = tq.prepare(model_fused)
-model_quantized = tq.convert(model_prepared)
-
-
 
 # Define the quantization configuration
 quant_config = tq.get_default_qconfig('fbgemm')
 model_fused.qconfig = quant_config
 
 
+# Quantize the model
+model_prepared = tq.prepare(model_fused)
+model_quantized = tq.convert(model_prepared)
 
 train_dataset, test_dataset, train_loader, test_loader = util.dataset_util.dataset_load()
 
